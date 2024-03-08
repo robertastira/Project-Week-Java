@@ -17,6 +17,9 @@ public class main {
         laGioconda.abbassaluminosita();
         laGioconda.abbassaluminosita();
         laGioconda.Show();
+
+
+
         Scanner scanner = new Scanner(System.in);
         elementomultimediale[] arrayOggetti = new elementomultimediale[5];
 
@@ -54,6 +57,7 @@ public class main {
         }
 
         //Ciclo switch per far visualizzare un elemento, piuttosto che un altro.
+        //Non so se il while sia necessario, ma è per dirgli di continuare il ciclo finché non si clicca lo 0.
         int input;
 
         do {
