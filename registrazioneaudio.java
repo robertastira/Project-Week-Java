@@ -24,11 +24,13 @@ public class registrazioneaudio extends elementomultimediale implements player, 
 
     @Override
     public void alzaVolume() {
+        volume++;
 
     }
 
     @Override
     public void abbassaVolume() {
+        volume--;
 
     }
 }

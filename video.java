@@ -26,11 +26,14 @@ public class video extends elementomultimediale implements player, volume, lumin
 
     @Override
     public void alzaVolume() {
+            volume++;
 
     }
 
     @Override
     public void abbassaVolume() {
+            volume--;
+
 
     }
 
