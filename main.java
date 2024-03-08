@@ -21,43 +21,71 @@ public class main {
         elementomultimediale[] arrayOggetti = new elementomultimediale[5];
 
         for (int i = 0; i < 2; i++) {
-            System.out.println("Inserisci il titolo dell'immagine " + (i + 1) + ":");
+            System.out.println("Inserisci il titolo dell'immagine: ");
             String titolo = scanner.nextLine();
-            System.out.println("Inserisci la luminosita dell'immagine " + (i + 1) + ":");
+            System.out.println("Inserisci la luminosita dell'immagine: ");
             int luminosita = scanner.nextInt();
             scanner.nextLine();
             arrayOggetti[i] = new immagine(titolo, luminosita);
         }
 
         for (int i = 2; i < 4; i++) {
-            System.out.println("Inserisci il titolo del video " + (i - 1) + ":");
+            System.out.println("Inserisci il titolo del video: ");
             String titolo = scanner.nextLine();
-            System.out.println("Inserisci la durata del video " + (i - 1) + ":");
+            System.out.println("Inserisci la durata del video: ");
             int durata = scanner.nextInt();
-            System.out.println("Inserisci la luminosita del video " + (i - 1) + ":");
+            System.out.println("Inserisci la luminosita del video: ");
             int luminosita = scanner.nextInt();
-            System.out.println("Inserisci il volume del video " + (i - 1) + ":");
+            System.out.println("Inserisci il volume del video: ");
             int volume = scanner.nextInt();
             scanner.nextLine();
             arrayOggetti[i] = new video(titolo, volume, durata, luminosita);
         }
 
         for (int i = 4; i < 5; i++) {
-            System.out.println("Inserisci il titolo della registrazione audio:");
+            System.out.println("Inserisci il titolo della registrazione audio: ");
             String titolo = scanner.nextLine();
-            System.out.println("Inserisci la durata della registrazione audio:");
+            System.out.println("Inserisci la durata della registrazione audio: ");
             int durata = scanner.nextInt();
-            System.out.println("Inserisci il volume della registrazione audio:");
+            System.out.println("Inserisci il volume della registrazione audio: ");
             int volume = scanner.nextInt();
             scanner.nextLine();
             arrayOggetti[i] = new registrazioneaudio(titolo, volume, durata);
         }
 
-        // Stampa dei media inseriti
-        System.out.println("\nMedia inseriti:");
-        for (elementomultimediale media : arrayOggetti) {
-            System.out.println(media);
-        }
+        //Ciclo switch per far visualizzare un elemento, piuttosto che un altro.
+        int input;
+
+        do {
+            System.out.println("Inserisci un numero (0 per uscire): ");
+            input = scanner.nextInt();
+
+            switch (input) {
+                case 0:
+                    System.out.println("Uscita dal ciclo.");
+                    break;
+                case 1:
+                    System.out.println("Elemento selezionato: " + arrayOggetti[0]);
+                    break;
+                case 2:
+                    System.out.println("Elemento selezionato: " + arrayOggetti[1]);
+                    break;
+                case 3:
+                    System.out.println("Elemento selezionato: " + arrayOggetti[2]);
+                    break;
+                case 4:
+                    System.out.println("Elemento selezionato: " + arrayOggetti[3]);
+                    break;
+                case 5:
+                    System.out.println("Elemento selezionato: " + arrayOggetti[4]);
+                    break;
+                default:
+                    System.out.println("Input non valido. Riprova.");
+            }
+        } while (input != 0);
+
+
+
 
         scanner.close();
 
