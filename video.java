@@ -51,4 +51,14 @@ public class video extends elementomultimediale implements player, volume, lumin
         luminosita--;
 
     }
+
+    @Override
+    public String toString() {
+        return "video{" +
+                "durata=" + durata +
+                ", volume=" + volume +
+                ", luminosita=" + luminosita +
+                ", titolo='" + titolo + '\'' +
+                '}';
+    }
 }

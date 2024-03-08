@@ -33,4 +33,13 @@ public class registrazioneaudio extends elementomultimediale implements player, 
         volume--;
 
     }
+
+    @Override
+    public String toString() {
+        return "registrazioneaudio{" +
+                "durata=" + durata +
+                ", volume=" + volume +
+                ", titolo='" + titolo + '\'' +
+                '}';
+    }
 }

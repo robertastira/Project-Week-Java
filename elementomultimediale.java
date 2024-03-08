@@ -9,5 +9,10 @@ public elementomultimediale(String titolo){
         return titolo;
     }
 
-
+    @Override
+    public String toString() {
+        return "elementomultimediale{" +
+                "titolo='" + titolo + '\'' +
+                '}';
+    }
 }
