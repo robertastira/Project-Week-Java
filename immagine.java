@@ -2,7 +2,7 @@ import interfacce.luminosita;
 
 public class immagine extends elementomultimediale implements luminosita{
     public int luminosita;
-    public immagine(String titolo) {
+    public immagine(String titolo,int luminosita) {
         super(titolo);
         this.luminosita = luminosita;
     }
