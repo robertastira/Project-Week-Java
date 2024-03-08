@@ -21,6 +21,9 @@ public class video extends elementomultimediale implements player, volume, lumin
         for(int i=0; i<volume; i++){
             System.out.println("!");
         }
+        for (int i=0; i<luminosita; i++){
+            System.out.println("#");
+        }
 
     }
 
@@ -39,11 +42,13 @@ public class video extends elementomultimediale implements player, volume, lumin
 
     @Override
     public void alzaLuminosita() {
+        luminosita++;
 
     }
 
     @Override
     public void abbassaluminosita() {
+        luminosita--;
 
     }
 }

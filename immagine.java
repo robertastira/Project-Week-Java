@@ -9,13 +9,21 @@ public class immagine extends elementomultimediale implements luminosita{
 
     @Override
     public void alzaLuminosita() {
+        luminosita++;
 
     }
 
     @Override
     public void abbassaluminosita() {
+        luminosita--;
 
     }
 
-    public void show(){}
+    public void Show(){
+        System.out.println(getTitolo());
+        for (int i=0; i<luminosita; i++){
+            System.out.println("#");
+        }
+
+    }
 }
